@@ -1,0 +1,26 @@
+{
+  "name": "ukeb-web",
+  "version": "1.0.0",
+  "author": "berkaycoban",
+  "license": "ISC",
+  "scripts": {
+    "dev": "next",
+    "build:next": "NODE_ENV=production next build",
+    "build": "yarn run build:next",
+    "start": "next start",
+    "icon": "svgr icons -d components/icons --icon"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^5.4.0",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.2.3",
+    "prettier": "^2.0.5"
+  }
+}

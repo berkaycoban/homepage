@@ -1,0 +1,6 @@
+.layout {
+  main {
+    background-color: var(--c-background);
+    color: var(--c-text);
+  }
+}
