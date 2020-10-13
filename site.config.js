@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Next Web Template',
-  description: 'Next Web Template',
+  title: 'Ankara PHP',
+  description: 'Ankara PHP Gelistirici Toplulugu',
   siteUrl: '',
   googleAnalytic: 'X-XXXXXXXXXX',
   author: {
