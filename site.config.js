@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Ankara PHP',
   description: 'Ankara PHP Gelistirici Toplulugu',
-  siteUrl: '',
+  siteUrl: 'https://ankara-php.vercel.app/',
   googleAnalytic: 'X-XXXXXXXXXX',
   author: {
     email: 'bcobann35@gmail.com',
