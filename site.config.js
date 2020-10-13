@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Web-template',
-  description: 'Web-template',
+  title: 'Next Web Template',
+  description: 'Next Web Template',
   siteUrl: '',
   googleAnalytic: 'X-XXXXXXXXXX',
   author: {
