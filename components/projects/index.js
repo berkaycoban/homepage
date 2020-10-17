@@ -72,6 +72,7 @@ function Projects({ home, allProjects }) {
                             key={`project-${project.slug}`}
                             imageSrc={project.imageSrc}
                             imageAlt={project.imageAlt}
+                            slug={project.slug}
                           />
                         )
                       })}
