@@ -6,15 +6,9 @@ export const PAGES = {
     target: ''
   },
   portoflio: {
-    path: '/portfolio',
-    name: 'Portfolio',
+    path: '/projects',
+    name: 'Projects',
     name_tr: 'Projeler',
-    target: ''
-  },
-  blog: {
-    path: '/blog',
-    name: 'Blog',
-    name_tr: 'Yazilar',
     target: ''
   },
   follow: {
