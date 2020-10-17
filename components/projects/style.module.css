@@ -1,0 +1,20 @@
+.projects {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.content {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (--m) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (--t) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  margin-top: 2em;
+  padding-bottom: 2em;
+}

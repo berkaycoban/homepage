@@ -1,0 +1,32 @@
+.header {
+  color: var(--c-text);
+  background-color: var(--c-backgroundSurface);
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.content {
+  display: grid;
+  grid-template-areas: 'logo menu';
+  justify-content: space-between;
+}
+
+.title {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.job {
+  font-size: 2em;
+
+  @media (--t) {
+    font-size: 2.5em;
+  }
+
+  font-weight: 400;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

@@ -1,11 +1,12 @@
 module.exports = {
-  title: 'Ankara PHP',
-  description: 'Ankara PHP Gelistirici Toplulugu',
-  siteUrl: 'https://ankara-php.vercel.app/',
+  title: 'Berkay Ç.',
+  description: 'Kişisel web sitesi. Personal web site.',
+  siteUrl: 'https://berkaycoban.com',
   googleAnalytic: 'X-XXXXXXXXXX',
   author: {
     email: 'bcobann35@gmail.com',
-    name: 'Berkay COBAN'
+    name: 'Berkay COBAN',
+    twitter: 'https://twitter.com/berkaycoban35'
   },
   lang: 'en'
 }

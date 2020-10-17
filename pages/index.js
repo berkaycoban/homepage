@@ -1,18 +1,23 @@
 import React from 'react'
-import Head from 'next/head'
 
 import Layout from '../components/layout'
+import HeaderTitle from '../components/header/title'
+import About from '../components/about'
+import Projects from '../components/projects'
 
 import { getAllProjects } from '../lib/api'
 
 function HomePage({ allProjects }) {
   return (
     <Layout>
-      <Head>
+      <head>
         <title>Home Page</title>
-      </Head>
+      </head>
 
-      {JSON.stringify(allProjects)}
+      <HeaderTitle />
+
+      <About />
+      <Projects home allProjects={allProjects} />
     </Layout>
   )
 }
