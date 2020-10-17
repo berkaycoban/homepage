@@ -12,6 +12,7 @@ import StoreContext from '../../../store'
 import LanguageText from '../../../lib/language-text'
 
 import { languageOptions } from '../../../languages'
+import PostTitle from '../../text/post-title'
 
 // TODO: Proje turune gore border-top rengi degisecek
 function ProjectItem({
@@ -34,7 +35,7 @@ function ProjectItem({
   )
 
   return (
-    <div className={styles.project}>
+    <article className={styles.project}>
       <Button href={`project/${slug}`}>
         {imageSrc && (
           <div className={styles.image}>
@@ -42,7 +43,7 @@ function ProjectItem({
           </div>
         )}
 
-        <h5 className={styles.name}>{title}</h5>
+        <PostTitle className={styles.name}>{title}</PostTitle>
 
         <TextBody className={styles.description}>{description}</TextBody>
 
@@ -50,7 +51,7 @@ function ProjectItem({
           {dateTime} <LanguageText tid={'ago'} />
         </time>
       </Button>
-    </div>
+    </article>
   )
 }
 

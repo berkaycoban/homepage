@@ -7,7 +7,7 @@ desc_en: 'Lorem ipsum dolor sit amet.'
 date: '2020-09-05T10:00'
 
 imageSrc: 'https://picsum.photos/200'
-imageAlt: ''
+imageAlt: 'Proje alt tagi'
 ---
 
 Detay
