@@ -1,9 +1,32 @@
-import React, { createContext } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
+import { dictionaryList } from '../languages'
 
 const StoreContext = createContext(null)
 
 export function StoreProvider({ children }) {
-  return <StoreContext.Provider>{children}</StoreContext.Provider>
+  const [userLanguage, setUserLanguage] = useState('en')
+
+  const userLanguageChange = (language) => {
+    setUserLanguage(language)
+    localStorage.setItem('LANG', language)
+  }
+
+  useEffect(() => {
+    let defaultLanguage = window.localStorage.getItem('LANG') || 'en'
+    userLanguageChange(defaultLanguage)
+  }, [userLanguageChange])
+
+  const storeProviderValues = {
+    userLanguage,
+    userLanguageChange,
+    dictionary: dictionaryList[userLanguage]
+  }
+
+  return (
+    <StoreContext.Provider value={storeProviderValues}>
+      {children}
+    </StoreContext.Provider>
+  )
 }
 
 export default StoreContext

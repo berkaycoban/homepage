@@ -1,0 +1,15 @@
+:root {
+  --c-background: #000;
+  --c-backgroundSurface: #121212;
+
+  --c-primary: #e41f7b;
+  --c-secondary: #00b0ff;
+  --c-shadowColor: #292929;
+
+  --c-text: #fff;
+  --c-textOnPrimary: #fff;
+  --c-textOnSecondary: #fff;
+  --c-textSecondary: #93a6af;
+
+  --fade: 300ms;
+}

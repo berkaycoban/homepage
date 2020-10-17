@@ -1,0 +1,20 @@
+{
+  "homePageTitle": "Anasayfa",
+
+  "welcomeTitle": "Merhaba! Ben",
+  "job": "Bilgisayar Müh. Öğrencisi",
+
+  "about": "Hakkimda yazisi gelecek",
+
+  "writingsTitle": "Yazılar",
+  "writingsSubtitle": "Blog yazılarım.",
+  "projectsTitle": "Projeler",
+  "projectsSubtitle": "Geliştirdiğim projeler.",
+  "ago": "önce",
+
+  "errorCode": "Hata kodu",
+  "pageNotFound": "Sayfa bulunamadı!",
+  "areYouLost": "Yolunu mu kaybettin?",
+  "pageNotExists": "Aradığın sayfayı bulamadım.",
+  "helpfulLinks": "Belki bunlar sana yardımcı olabilir."
+}

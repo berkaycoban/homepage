@@ -1,0 +1,13 @@
+.sectionTitle {
+  font-size: 2em;
+}
+
+.subTitle {
+  font-size: 1.25rem;
+  color: var(--c-textSecondary);
+  font-weight: 400;
+}
+
+.center {
+  text-align: center;
+}

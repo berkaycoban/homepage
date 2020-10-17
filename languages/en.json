@@ -1,0 +1,20 @@
+{
+  "homePageTitle": "Homepage",
+
+  "welcomeTitle": "Hi! I'm",
+  "job": "CS Student",
+
+  "about": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the Link, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining Link unchanged. It was popularised in the 1960s.",
+
+  "writingsTitle": "Writings",
+  "writingsSubtitle": "The latests posts of my blog.",
+  "projectsTitle": "Projects",
+  "projectsSubtitle": "The latests projects.",
+  "ago": "ago",
+
+  "errorCode": "Error code",
+  "pageNotFound": "Page not found!",
+  "areYouLost": "Are you lost?",
+  "pageNotExists": "The page you are looking for doesn't exists.",
+  "helpfulLinks": "Here are some helpful links instead:"
+}
