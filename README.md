@@ -1,3 +1,3 @@
-# Ankara PHP Website
+# Personal web site
 
-- ### [Website](https://ankara-php.vercel.app/)
+- ### [Website](https://berkaycoban.com/)

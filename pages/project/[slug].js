@@ -3,27 +3,27 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 
 import Layout from '../../components/layout'
-import Event from '../../components/event'
+import Project from '../../components/event'
 
 import markdownToHtml from '../../lib/markdownToHtml'
-import { getAllEvents, getEventBySlug } from '../../lib/api'
+import { getAllProjects, getProjectBySlug } from '../../lib/api'
 
-function EventPage({ event }) {
+function ProjectPage({ project }) {
   const router = useRouter()
 
-  if (!router.isFallback && !event?.slug) {
+  if (!router.isFallback && !project?.slug) {
     return <ErrorPage code={404} />
   }
 
   return (
     <Layout>
-      <Event {...event} />
+      <Project {...project} />
     </Layout>
   )
 }
 
 export async function getStaticProps({ params }) {
-  const event = getEventBySlug(params.slug, [
+  const project = getProjectBySlug(params.slug, [
     'title',
     'date',
     'slug',
@@ -33,12 +33,12 @@ export async function getStaticProps({ params }) {
     'attendees'
   ])
 
-  const content = await markdownToHtml(event.content || '')
+  const content = await markdownToHtml(project.content || '')
 
   return {
     props: {
-      event: {
-        ...event,
+      project: {
+        ...project,
         content
       }
     }
@@ -46,13 +46,13 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const events = getAllEvents(['slug'])
+  const projects = getAllProjects(['slug'])
 
   return {
-    paths: events.map((event) => {
+    paths: projects.map((project) => {
       return {
         params: {
-          slug: event.slug
+          slug: project.slug
         }
       }
     }),
@@ -60,4 +60,4 @@ export async function getStaticPaths() {
   }
 }
 
-export default EventPage
+export default ProjectPage
