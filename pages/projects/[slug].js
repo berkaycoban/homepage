@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 import ErrorPage from 'next/error'
 
 import Layout from '../../components/layout'
@@ -7,8 +8,14 @@ import ProjectDetail from '../../components/projects/detail'
 
 import markdownToHtml from '../../lib/markdownToHtml'
 import { getAllProjects, getProjectBySlug } from '../../lib/api'
+import StoreContext from '../../store'
+
+import siteConfig from '../../site.config'
 
 function ProjectPage({ project }) {
+  const { userLanguage } = useContext(StoreContext)
+  const title = userLanguage == 'en' ? project.title_en : project.title
+
   const router = useRouter()
 
   if (!router.isFallback && !project?.slug) {
@@ -17,6 +24,11 @@ function ProjectPage({ project }) {
 
   return (
     <Layout>
+      <Head>
+        <title>
+          {title} - {siteConfig.shortTitle}
+        </title>
+      </Head>
       <ProjectDetail {...project} />
     </Layout>
   )
@@ -25,12 +37,16 @@ function ProjectPage({ project }) {
 export async function getStaticProps({ params }) {
   const project = getProjectBySlug(params.slug, [
     'title',
-    'date',
-    'slug',
+    'title_en',
+    'desc',
+    'desc_en',
     'content',
-    'coverImage',
-    'excerpt',
-    'attendees'
+    'slug',
+    'date',
+    'imageSrc',
+    'imageAlt',
+    'category',
+    'tools'
   ])
 
   const content = await markdownToHtml(project.content || '')

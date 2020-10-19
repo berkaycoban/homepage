@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import Head from 'next/head'
 
 import Layout from '../components/layout'
 import HeaderTitle from '../components/header/title'
@@ -6,13 +7,20 @@ import About from '../components/about'
 import Projects from '../components/projects'
 
 import { getAllProjects } from '../lib/api'
+import StoreContext from '../store'
+import siteConfig from '../site.config'
 
 function HomePage({ allProjects }) {
+  const { userLanguage } = useContext(StoreContext)
+  const title = userLanguage == 'en' ? 'Home Page' : 'Anasayfa'
+
   return (
     <Layout>
-      <head>
-        <title>Home Page</title>
-      </head>
+      <Head>
+        <title>
+          {title} - {siteConfig.shortTitle}
+        </title>
+      </Head>
 
       <HeaderTitle />
 
@@ -31,7 +39,8 @@ export async function getStaticProps() {
     'slug',
     'date',
     'imageSrc',
-    'imageAlt'
+    'imageAlt',
+    'category'
   ])
 
   return {

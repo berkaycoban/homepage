@@ -1,6 +1,4 @@
 {
-  "homePageTitle": "Anasayfa",
-
   "welcomeTitle": "Merhaba! Ben",
   "job": "Bilgisayar Müh. Öğrencisi",
 
@@ -13,7 +11,6 @@
   "ago": "önce",
 
   "errorCode": "Hata kodu",
-  "pageNotFound": "Sayfa bulunamadı!",
   "areYouLost": "Yolunu mu kaybettin?",
   "pageNotExists": "Aradığın sayfayı bulamadım.",
   "helpfulLinks": "Belki bunlar sana yardımcı olabilir."

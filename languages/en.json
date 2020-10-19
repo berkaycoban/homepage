@@ -1,6 +1,4 @@
 {
-  "homePageTitle": "Homepage",
-
   "welcomeTitle": "Hi! I'm",
   "job": "C'ENG Student",
 
@@ -13,7 +11,6 @@
   "ago": "ago",
 
   "errorCode": "Error code",
-  "pageNotFound": "Page not found!",
   "areYouLost": "Are you lost?",
   "pageNotExists": "The page you are looking for doesn't exists.",
   "helpfulLinks": "Here are some helpful links instead:"

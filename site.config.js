@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Berkay Ç.',
+  shortTitle: 'BC',
   description: 'Berkay Coban personal website.',
   siteUrl: 'https://berkaycoban.com',
   googleAnalytic: 'X-XXXXXXXXXX',

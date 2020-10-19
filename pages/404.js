@@ -1,22 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import Head from 'next/head'
 
 import Layout from '../components/layout'
 import Error404 from '../components/error'
 
-import LanguageText from '../lib/language-text'
+import StoreContext from '../store'
+import siteConfig from '../site.config'
 
 function ErrorPage() {
+  const { userLanguage } = useContext(StoreContext)
+  const title = userLanguage == 'en' ? 'Page not found!' : 'Sayfa bulunamadı!'
+
   return (
-    <>
-      <head>
+    <Layout>
+      <Head>
         <title>
-          <LanguageText tid={'pageNotFound'} />
+          {title} - {siteConfig.shortTitle}
         </title>
-      </head>
-      <Layout>
-        <Error404 />
-      </Layout>
-    </>
+      </Head>
+      <Error404 />
+    </Layout>
   )
 }
 
