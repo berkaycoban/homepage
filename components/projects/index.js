@@ -33,13 +33,11 @@ function Projects({ home, allProjects }) {
 
                 return (
                   <ProjectItem
+                    {...project}
                     title={title}
                     description={desc}
                     datetime={dateTime}
                     key={`project-${project.slug}`}
-                    imageSrc={project.imageSrc}
-                    imageAlt={project.imageAlt}
-                    slug={project.slug}
                   />
                 )
               })}
@@ -66,13 +64,11 @@ function Projects({ home, allProjects }) {
 
                         return (
                           <ProjectItem
+                            {...project}
                             title={title}
                             description={desc}
                             datetime={dateTime}
                             key={`project-${project.slug}`}
-                            imageSrc={project.imageSrc}
-                            imageAlt={project.imageAlt}
-                            slug={project.slug}
                           />
                         )
                       })}

@@ -14,38 +14,43 @@ import LanguageText from '../../../lib/language-text'
 import { languageOptions } from '../../../languages'
 import PostTitle from '../../text/post-title'
 
-// TODO: Proje turune gore border-top rengi degisecek
+import getBorderColor from '../../../hooks/getProjectBorderColor'
+
 function ProjectItem({
-  title = 'Project Name',
-  description = 'Lorem ipsum dolor sit amet.',
-  datetime = new Date('2020', '08', '10'),
-  imageSrc,
-  imageAlt,
-  slug
+  TITLE = 'Project Name',
+  DESCRIPTION = 'Lorem ipsum dolor sit amet.',
+  DATETIME = new Date('2020', '08', '10'),
+  ...project
 }) {
   const store = useContext(StoreContext)
+
+  // project border top color
+  const borderColor = getBorderColor(project.category)
 
   // Datetime i18n
   const locale = store.userLanguage === languageOptions.tr
   const dateTime = formatDistanceToNowStrict(
-    datetime,
+    DATETIME,
     locale && {
       locale: tr
     }
   )
 
   return (
-    <article className={styles.project}>
-      <Button href={`project/${slug}`}>
-        {imageSrc && (
+    <article
+      className={styles.project}
+      style={{ '--border-color': borderColor }}
+    >
+      <Button href={`projects/${project.slug}`}>
+        {project.imageSrc && (
           <div className={styles.image}>
-            <Image src={imageSrc} alt={imageAlt} />
+            <Image src={project.imageSrc} alt={project.imageAlt} />
           </div>
         )}
 
-        <PostTitle className={styles.name}>{title}</PostTitle>
+        <PostTitle className={styles.name}>{TITLE}</PostTitle>
 
-        <TextBody className={styles.description}>{description}</TextBody>
+        <TextBody className={styles.description}>{DESCRIPTION}</TextBody>
 
         <time className={styles.datetime}>
           {dateTime} <LanguageText tid={'ago'} />

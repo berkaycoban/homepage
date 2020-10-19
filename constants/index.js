@@ -34,10 +34,6 @@ export const SOCIAL = {
     url: 'https://github.com/berkaycoban',
     name: 'Github',
     target: '_blank'
-  },
-  blog: {
-    url: '/blog',
-    name: 'Blog'
   }
 }
 
