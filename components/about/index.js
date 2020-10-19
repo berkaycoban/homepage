@@ -15,7 +15,7 @@ function About() {
           <LanguageText tid={'about'} />
         </Body>
 
-        <div class={styles.skills}>Yetenekler gelecek</div>
+        <div className={styles.skills}>Yetenekler gelecek</div>
       </Wrapper>
     </section>
   )
