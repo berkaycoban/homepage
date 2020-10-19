@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Berkay Ç.',
-  description: 'Kişisel web sitesi. Personal web site.',
+  description: 'Berkay Coban personal website.',
   siteUrl: 'https://berkaycoban.com',
   googleAnalytic: 'X-XXXXXXXXXX',
   author: {
