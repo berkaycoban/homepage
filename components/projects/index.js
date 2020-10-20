@@ -25,18 +25,18 @@ function Projects({ home, allProjects }) {
             </SectionTitle>
             <div className={styles.content}>
               {allProjects.map((project) => {
-                const title =
+                const TITLE =
                   userLanguage === 'tr' ? project.title : project.title_en
-                const desc =
+                const DESC =
                   userLanguage === 'tr' ? project.desc : project.desc_en
-                const dateTime = new Date(project.date)
+                const DATETIME = new Date(project.date)
 
                 return (
                   <ProjectItem
                     {...project}
-                    title={title}
-                    description={desc}
-                    datetime={dateTime}
+                    TITLE={TITLE}
+                    DESCRIPTION={DESC}
+                    DATETIME={DATETIME}
                     key={`project-${project.slug}`}
                   />
                 )
@@ -54,20 +54,20 @@ function Projects({ home, allProjects }) {
 
                     <div className={styles.content}>
                       {allProjects[year].map((project) => {
-                        const title =
+                        const TITLE =
                           userLanguage === 'tr'
                             ? project.title
                             : project.title_en
-                        const desc =
+                        const DESC =
                           userLanguage === 'tr' ? project.desc : project.desc_en
-                        const dateTime = new Date(project.date)
+                        const DATETIME = new Date(project.date)
 
                         return (
                           <ProjectItem
                             {...project}
-                            title={title}
-                            description={desc}
-                            datetime={dateTime}
+                            TITLE={TITLE}
+                            DESCRIPTION={DESC}
+                            DATETIME={DATETIME}
                             key={`project-${project.slug}`}
                           />
                         )

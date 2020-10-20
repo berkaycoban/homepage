@@ -17,9 +17,9 @@ import PostTitle from '../../text/post-title'
 import getBorderColor from '../../../hooks/getProjectBorderColor'
 
 function ProjectItem({
-  TITLE = 'Project Name',
-  DESCRIPTION = 'Lorem ipsum dolor sit amet.',
-  DATETIME = new Date('2020', '08', '10'),
+  TITLE,
+  DESCRIPTION,
+  DATETIME,
   ...project
 }) {
   const store = useContext(StoreContext)
