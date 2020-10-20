@@ -16,12 +16,7 @@ import PostTitle from '../../text/post-title'
 
 import getBorderColor from '../../../hooks/getProjectBorderColor'
 
-function ProjectItem({
-  TITLE,
-  DESCRIPTION,
-  DATETIME,
-  ...project
-}) {
+function ProjectItem({ TITLE, DESCRIPTION, DATETIME, ...project }) {
   const store = useContext(StoreContext)
 
   // project border top color
@@ -41,14 +36,8 @@ function ProjectItem({
       className={styles.project}
       style={{ '--border-color': borderColor }}
     >
-      <Button href={`projects/${project.slug}`}>
-        {project.imageSrc && (
-          <div className={styles.image}>
-            <Image src={project.imageSrc} alt={project.imageAlt} />
-          </div>
-        )}
-
-        <PostTitle className={styles.name}>{TITLE}</PostTitle>
+      <Button href={`projects/${project.slug}`} className={styles.content}>
+        <PostTitle className={styles.title}>{TITLE}</PostTitle>
 
         <TextBody className={styles.description}>{DESCRIPTION}</TextBody>
 
