@@ -1,7 +1,4 @@
-const data = [
-  { color: 'var(--c-primary)', category: 'web' },
-  { color: 'var(--c-secondary)', category: 'design' }
-]
+const data = [{ color: 'var(--c-borderWeb)', category: 'web' }]
 
 function getBorderColor(category) {
   const item = data.filter((data) => data.category == category)
