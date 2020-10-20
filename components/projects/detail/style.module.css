@@ -23,3 +23,21 @@
 .content {
   grid-area: content;
 }
+
+.tools {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+
+  span {
+    cursor: pointer;
+
+    &:hover {
+      font-weight: 700;
+    }
+
+    & + span {
+      margin-left: 2rem;
+    }
+  }
+}

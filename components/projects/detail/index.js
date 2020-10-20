@@ -1,3 +1,4 @@
+import { useContext } from 'react'
 import styles from './style.module.css'
 
 import Markdown from './markdown'
@@ -5,7 +6,12 @@ import Wrapper from '../../wrapper'
 import Image from '../../image'
 import SectionTitle from '../../text/section-title'
 
+import StoreContext from '../../../store'
+
 function ProjectDetail({ ...project }) {
+  const { userLanguage } = useContext(StoreContext)
+
+  const TITLE = userLanguage == 'tr' ? project.title : project.title_en
   return (
     <section>
       <Wrapper className={styles.detail}>
@@ -14,16 +20,19 @@ function ProjectDetail({ ...project }) {
           alt={project.imageAlt}
           className={styles.image}
         />
-        <SectionTitle className={styles.title}>{project.title}</SectionTitle>
-        <Markdown content={project.content} className={styles.content} />
+        <SectionTitle className={styles.title}>{TITLE}</SectionTitle>
 
-        {/* TODO: Kullanilan araclar gelecek */}
+        <div className={styles.content}>
+          {userLanguage == 'tr' && (
+            <Markdown className={styles.content} content={project.content} />
+          )}
 
-        {/* {Object.keys(project.tools).map((key) => {
-          const ITEM = project.tools[key]
-
-          return ITEM
-        })} */}
+          <div className={styles.tools}>
+            {Object.keys(project.tools).map((item) => {
+              return <span>{item}</span>
+            })}
+          </div>
+        </div>
       </Wrapper>
     </section>
   )

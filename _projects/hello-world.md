@@ -11,7 +11,7 @@ imageAlt: 'Proje alt tagi'
 
 # Diller icin icon kullanilabilir
 
-tools: { languages: ['nextJS', 'HTML5', 'CSS3'] }
+tools: { 'Next.JS', 'HTML 5', 'CSS 3' }
 category: 'web'
 ---
 
