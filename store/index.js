@@ -7,12 +7,12 @@ export function StoreProvider({ children }) {
   const [userLanguage, setUserLanguage] = useState('tr')
 
   const userLanguageChange = (language) => {
-    setUserLanguage(language)r
+    setUserLanguage(language)
     localStorage.setItem('LANG', language)
   }
 
   useEffect(() => {
-    let defaultLanguage = window.localStorage.getItem('LANG') || 't'
+    let defaultLanguage = window.localStorage.getItem('LANG') || 'tr'
     userLanguageChange(defaultLanguage)
   }, [userLanguageChange])
 
