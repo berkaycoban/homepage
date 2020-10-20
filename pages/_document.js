@@ -29,6 +29,10 @@ class MyDocument extends Document {
           <meta name="twitter:title" content={SiteConfig.title} />
           <meta name="twitter:description" content={SiteConfig.description} />
 
+          {/* Favicon */}
+          <link rel="shortcut icon" href={'/images/favicon.ico'} />
+          <link rel="icon" href={'/images/favicon.ico'} />
+
           {/* analytic */}
           {SiteConfig.googleAnalytic && (
             <>
