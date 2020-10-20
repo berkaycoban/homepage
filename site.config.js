@@ -3,7 +3,7 @@ module.exports = {
   shortTitle: 'BC',
   description: 'Berkay Coban personal website.',
   siteUrl: 'https://berkaycoban.com',
-  googleAnalytic: 'X-XXXXXXXXXX',
+  googleAnalytic: 'UA-180920580-1',
   author: {
     email: 'bcobann35@gmail.com',
     name: 'Berkay COBAN',
