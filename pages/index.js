@@ -38,8 +38,6 @@ export async function getStaticProps() {
     'desc_en',
     'slug',
     'date',
-    'imageSrc',
-    'imageAlt',
     'category'
   ])
 
