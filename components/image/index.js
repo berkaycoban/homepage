@@ -4,8 +4,8 @@ import styles from './style.module.css'
 
 function Image({ src, alt }) {
   return (
-    <figure className={styles.container}>
-      <img src={src} alt={alt} className={styles.item} />
+    <figure>
+      <img src={src} alt={alt} className={styles.image} />
     </figure>
   )
 }
