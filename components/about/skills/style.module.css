@@ -1,0 +1,36 @@
+.skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+
+  @media (--t) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  margin-top: 2rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  p {
+    font-size: 20px;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+
+  span {
+    font-size: 3rem;
+    color: var(--c-primary);
+    transition: all var(--fade) ease;
+
+    &:hover {
+      color: var(--c-text);
+    }
+  }
+}

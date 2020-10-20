@@ -42,3 +42,20 @@ export const SIZE = {
   TABLET_SIZE: 980,
   DESKTOP_SIZE: 1270
 }
+
+import * as Icon from '../components/icons'
+
+export const SKILLS = {
+  tools: {
+    icon: <Icon.Tools />,
+    items: ['Illustrator', 'Photoshop', 'Figma']
+  },
+  frontend: {
+    icon: <Icon.Frontend />,
+    items: ['HTML 5', 'CSS 3 & SASS', 'Javascript']
+  },
+  backend: {
+    icon: <Icon.Backend />,
+    items: ['PHP', 'Symfony', 'MySQL']
+  }
+}

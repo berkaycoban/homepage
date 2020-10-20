@@ -6,16 +6,13 @@ import Wrapper from '../wrapper'
 import Body from '../text/body'
 
 import LanguageText from '../../lib/language-text'
+import MySkills from './skills'
 
 function About() {
   return (
     <section className={styles.about}>
       <Wrapper>
-        <Body>
-          <LanguageText tid={'about'} />
-        </Body>
-
-        <div className={styles.skills}>Yetenekler gelecek</div>
+        <MySkills />
       </Wrapper>
     </section>
   )
