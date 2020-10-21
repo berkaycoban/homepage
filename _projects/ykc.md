@@ -13,4 +13,4 @@ tools: { 'Next.JS', 'HTML 5', 'CSS 3', 'Illustrator' }
 category: 'web'
 ---
 
-Yigit Kaman Consulting Services için web sitesi ve logo çalışması yapıldı.
+Yigit Kaman Consulting Services için **web sitesi** ve **logo** çalışması yapıldı.

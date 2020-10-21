@@ -13,4 +13,4 @@ tools: { 'Next.JS', 'HTML 5', 'CSS 3' }
 category: 'web'
 ---
 
-EPDesign için kişisel web sitesi yenileme çalışması yapıldı.
+EPDesign için kişisel **web** sitesi yenileme çalışması yapıldı.
