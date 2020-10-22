@@ -4,6 +4,7 @@ module.exports = {
   description: 'Berkay Coban personal website.',
   siteUrl: 'https://berkaycoban.com',
   googleAnalytic: 'UA-180920580-1',
+  googleTag: 'GTM-TF6RDZ9',
   author: {
     email: 'bcobann35@gmail.com',
     name: 'Berkay COBAN',

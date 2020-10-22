@@ -52,7 +52,7 @@ class MyDocument extends Document {
         <body>
           <noscript>
             <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-TF6RDZ9"
+              src={`https://www.googletagmanager.com/ns.html?id=${SiteConfig.googleTag}`}
               height="0"
               width="0"
               style={{ display: 'none', visibility: 'hidden' }}

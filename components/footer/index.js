@@ -42,6 +42,7 @@ function Footer() {
                     href={ITEM.url}
                     key={`social-link-${ITEM.url}`}
                     target={ITEM.target}
+                    key={`social-link-${ITEM.url}`}
                   >
                     {ITEM.name}
                   </Button>
