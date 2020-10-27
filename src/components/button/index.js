@@ -6,7 +6,7 @@ import styles from './style.module.css'
 
 function LinkButton({ children, className, ...props }) {
   return (
-    <Link href={props.href} replace>
+    <Link href={props.href}>
       <a className={className} rel="noopener" {...props}>
         {children}
       </a>
