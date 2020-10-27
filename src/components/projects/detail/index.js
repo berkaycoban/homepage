@@ -1,9 +1,10 @@
 import { useContext } from 'react'
+import Image from 'next/image'
+
 import styles from './style.module.css'
 
 import Markdown from './markdown'
 import Wrapper from '../../wrapper'
-import Image from '../../image'
 import SectionTitle from '../../text/section-title'
 
 import StoreContext from '../../../store'
@@ -19,6 +20,8 @@ function ProjectDetail({ ...project }) {
           src={project.imageSrc}
           alt={project.imageAlt}
           className={styles.image}
+          unsized
+          quality={100}
         />
         <SectionTitle className={styles.title}>{TITLE}</SectionTitle>
 

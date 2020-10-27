@@ -10,7 +10,7 @@ import markdownToHtml from '../../lib/markdownToHtml'
 import { getAllProjects, getProjectBySlug } from '../../lib/api'
 import StoreContext from '../../store'
 
-import siteConfig from '../../site.config'
+import siteConfig from '../../../site.config'
 
 function ProjectPage({ project }) {
   const { userLanguage } = useContext(StoreContext)

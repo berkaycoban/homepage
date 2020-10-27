@@ -1,18 +1,18 @@
 import React, { useContext } from 'react'
 import Head from 'next/head'
 
-import groupBy from 'lodash.groupby'
-
 import Layout from '../components/layout'
+import HeaderTitle from '../components/header/title'
+import About from '../components/about'
 import Projects from '../components/projects'
 
 import { getAllProjects } from '../lib/api'
 import StoreContext from '../store'
-import siteConfig from '../site.config'
+import siteConfig from '../../site.config'
 
-function ProjectsPage({ allProjects }) {
+function HomePage({ allProjects }) {
   const { userLanguage } = useContext(StoreContext)
-  const title = userLanguage == 'en' ? 'Projects' : 'Projeler'
+  const title = userLanguage == 'en' ? 'Home Page' : 'Anasayfa'
 
   return (
     <Layout>
@@ -22,7 +22,10 @@ function ProjectsPage({ allProjects }) {
         </title>
       </Head>
 
-      <Projects allProjects={allProjects} />
+      <HeaderTitle />
+
+      <About />
+      <Projects home allProjects={allProjects} />
     </Layout>
   )
 }
@@ -39,12 +42,8 @@ export async function getStaticProps() {
   ])
 
   return {
-    props: {
-      allProjects: groupBy(allProjects, (project) =>
-        new Date(project.date).getFullYear()
-      )
-    }
+    props: { allProjects }
   }
 }
 
-export default ProjectsPage
+export default HomePage

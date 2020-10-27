@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import React from 'react'
-import SiteConfig from '../site.config'
+import SiteConfig from '../../site.config'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {

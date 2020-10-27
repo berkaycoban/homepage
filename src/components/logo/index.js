@@ -5,7 +5,7 @@ import styles from './style.module.css'
 
 import Button from '../button'
 
-import siteConfig from '../../site.config'
+import siteConfig from '../../../site.config'
 
 function Logo({ className }) {
   return (

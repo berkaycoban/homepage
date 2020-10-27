@@ -5,7 +5,7 @@ import styles from './style.module.css'
 import Wrapper from '../wrapper'
 import Title from '../text/title'
 
-import siteConfig from '../../site.config'
+import siteConfig from '../../../site.config'
 
 import LanguageText from '../../lib/language-text'
 

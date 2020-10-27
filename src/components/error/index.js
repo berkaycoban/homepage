@@ -9,7 +9,7 @@ import Button from '../button'
 
 import LanguageText from '../../lib/language-text'
 
-import siteConfig from '../../site.config'
+import siteConfig from '../../../site.config'
 
 function Error404() {
   return (

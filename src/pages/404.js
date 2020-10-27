@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Error404 from '../components/error'
 
 import StoreContext from '../store'
-import siteConfig from '../site.config'
+import siteConfig from '../../site.config'
 
 function ErrorPage() {
   const { userLanguage } = useContext(StoreContext)
