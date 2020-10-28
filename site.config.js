@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Berkay Ç.',
   shortTitle: 'BC',
-  description: 'Berkay Coban personal website.',
+  description: 'Freelancer and student from Izmir',
   siteUrl: 'https://berkaycoban.com',
   googleAnalytic: 'G-DKPGLDF3GF',
   author: {
