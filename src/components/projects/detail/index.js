@@ -32,7 +32,7 @@ function ProjectDetail({ ...project }) {
 
           <div className={styles.tools}>
             {Object.keys(project.tools).map((item) => {
-              return <span>{item}</span>
+              return <span key={item}>{item}</span>
             })}
           </div>
         </div>
