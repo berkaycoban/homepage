@@ -5,7 +5,7 @@ module.exports = {
   siteUrl: 'https://berkaycoban.com',
   googleAnalytic: 'G-DKPGLDF3GF',
   author: {
-    email: 'bcobann35@gmail.com',
+    email: 'berkaycoban@pm.me',
     name: 'Berkay COBAN',
     twitter: 'https://twitter.com/berkaycoban35'
   },

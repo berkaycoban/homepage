@@ -11,6 +11,7 @@ import { SOCIAL } from '../../constants'
 import { languageOptions } from '../../languages'
 
 import StoreContext from '../../store'
+import siteConfig from '../../../site.config'
 
 function Footer() {
   const store = useContext(StoreContext)
@@ -42,12 +43,15 @@ function Footer() {
                     href={ITEM.url}
                     key={`social-link-${ITEM.url}`}
                     target={ITEM.target}
-                    key={`social-link-${ITEM.url}`}
                   >
                     {ITEM.name}
                   </Button>
                 )
               })}
+
+              <Button href={`mailto:${siteConfig.author.email}`} key={'email'}>
+                Email
+              </Button>
 
               <Button
                 onClick={changeLanguage}
