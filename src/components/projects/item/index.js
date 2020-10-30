@@ -5,7 +5,6 @@ import { tr } from 'date-fns/locale'
 import styles from './style.module.css'
 
 import TextBody from '../../text/body'
-import Image from '../../image'
 import Button from '../../button'
 
 import StoreContext from '../../../store'
