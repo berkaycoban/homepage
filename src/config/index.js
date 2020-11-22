@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Berkay Ç.',
+  title: 'Berkay Çoban',
   shortTitle: 'BC',
   description: 'Freelancer and student from Izmir',
   siteUrl: 'https://berkaycoban.com',
