@@ -1,8 +1,6 @@
-import React from 'react'
-
 import styles from './style.module.css'
 
-import Wrapper from '../wrapper'
+import Wrapper from 'components/wrapper'
 
 import MySkills from './skills'
 

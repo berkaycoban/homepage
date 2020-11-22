@@ -1,15 +1,15 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { useRouter } from 'next/router'
 
 import styles from './style.module.css'
 
-import Button from '../../button'
+import Button from 'components/button'
 
 import { PAGES } from '../../../constants'
 
-import { languageOptions } from '../../../languages'
+import { languageOptions } from 'languages'
 
-import StoreContext from '../../../store'
+import StoreContext from 'store'
 
 function Menu({ className }) {
   const router = useRouter()

@@ -2,16 +2,15 @@ import React, { useContext } from 'react'
 
 import styles from './style.module.css'
 
-import Wrapper from '../wrapper'
-import Button from '../button'
-import Logo from '../logo'
+import Wrapper from 'components/wrapper'
+import Button from 'components/button'
+import Logo from 'components/logo'
+
+import { languageOptions } from 'languages'
+import StoreContext from 'store'
+import siteConfig from 'config'
 
 import { SOCIAL } from '../../constants'
-
-import { languageOptions } from '../../languages'
-
-import StoreContext from '../../store'
-import siteConfig from '../../../site.config'
 
 function Footer() {
   const store = useContext(StoreContext)

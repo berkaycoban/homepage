@@ -4,10 +4,10 @@ import Image from 'next/image'
 import styles from './style.module.css'
 
 import Markdown from './markdown'
-import Wrapper from '../../wrapper'
-import SectionTitle from '../../text/section-title'
+import Wrapper from 'components/wrapper'
+import SectionTitle from 'components/text/section-title'
 
-import StoreContext from '../../../store'
+import StoreContext from 'store'
 
 function ProjectDetail({ ...project }) {
   const { userLanguage } = useContext(StoreContext)

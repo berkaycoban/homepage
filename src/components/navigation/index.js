@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import cn from 'classnames'
 
 import styles from './style.module.css'
 
 import Menu from './menu'
-import Button from '../button'
+import Button from 'components/button'
+
+import useWindowSize from 'hooks/useWindowSize'
 
 import { SIZE } from '../../constants'
-import useWindowSize from '../../hooks/useWindowSize'
 
 function Navigation() {
   const size = useWindowSize()

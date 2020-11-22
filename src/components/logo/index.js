@@ -1,11 +1,10 @@
-import React from 'react'
 import cn from 'classnames'
 
 import styles from './style.module.css'
 
-import Button from '../button'
+import Button from 'components/button'
 
-import siteConfig from '../../../site.config'
+import siteConfig from 'config'
 
 function Logo({ className }) {
   return (

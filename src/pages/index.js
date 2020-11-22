@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 import Head from 'next/head'
 
-import Layout from '../components/layout'
-import HeaderTitle from '../components/header/title'
-import About from '../components/about'
-import Projects from '../components/projects'
+import Layout from 'components/layout'
+import HeaderTitle from 'components/header/title'
+import About from 'components/about'
+import Projects from 'components/projects'
 
-import { getAllProjects } from '../lib/api'
-import StoreContext from '../store'
-import siteConfig from '../../site.config'
+import { getAllProjects } from 'lib/api'
+import StoreContext from 'store'
+import siteConfig from 'config'
 
 function HomePage({ allProjects }) {
   const { userLanguage } = useContext(StoreContext)

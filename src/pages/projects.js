@@ -3,12 +3,12 @@ import Head from 'next/head'
 
 import groupBy from 'lodash.groupby'
 
-import Layout from '../components/layout'
-import Projects from '../components/projects'
+import Layout from 'components/layout'
+import Projects from 'components/projects'
 
-import { getAllProjects } from '../lib/api'
-import StoreContext from '../store'
-import siteConfig from '../../site.config'
+import { getAllProjects } from 'lib/api'
+import StoreContext from 'store'
+import siteConfig from 'config'
 
 function ProjectsPage({ allProjects }) {
   const { userLanguage } = useContext(StoreContext)

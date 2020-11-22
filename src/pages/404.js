@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import Head from 'next/head'
 
-import Layout from '../components/layout'
-import Error404 from '../components/error'
+import Layout from 'components/layout'
+import Error404 from 'components/error'
 
-import StoreContext from '../store'
-import siteConfig from '../../site.config'
+import StoreContext from 'store'
+import siteConfig from 'config'
 
 function ErrorPage() {
   const { userLanguage } = useContext(StoreContext)

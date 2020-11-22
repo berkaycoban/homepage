@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import SiteConfig from '../../site.config'
+import SiteConfig from 'config'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -31,6 +31,9 @@ class MyDocument extends Document {
           {/* Favicon */}
           <link rel="shortcut icon" href={'/images/favicon.ico'} />
           <link rel="icon" href={'/images/favicon.ico'} />
+
+          {/* Manifest */}
+          <link rel="manifest" href={'/site.webmanifest'} />
 
           {/* analytic */}
           {SiteConfig.googleAnalytic && (

@@ -1,11 +1,9 @@
-import React from 'react'
-
 import styles from './style.module.css'
 
-import TextBody from '../../text/body'
-import SectionTitle from '../../text/section-title'
+import TextBody from 'components/text/body'
+import SectionTitle from 'components/text/section-title'
 
-import LanguageText from '../../../lib/language-text'
+import LanguageText from 'lib/language-text'
 
 import { SKILLS } from '../../../constants'
 

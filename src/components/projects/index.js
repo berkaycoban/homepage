@@ -1,13 +1,13 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 
 import styles from './style.module.css'
 
-import Wrapper from '../wrapper'
-import SectionTitle from '../text/section-title'
+import Wrapper from 'components/wrapper'
+import SectionTitle from 'components/text/section-title'
 import ProjectItem from './item'
 
-import StoreContext from '../../store'
-import LanguageText from '../../lib/language-text'
+import StoreContext from 'store'
+import LanguageText from 'lib/language-text'
 
 function Projects({ home, allProjects }) {
   const { userLanguage } = useContext(StoreContext)

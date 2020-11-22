@@ -1,19 +1,19 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict'
 import { tr } from 'date-fns/locale'
 
 import styles from './style.module.css'
 
-import TextBody from '../../text/body'
-import Button from '../../button'
+import TextBody from 'components/text/body'
+import Button from 'components/button'
+import PostTitle from 'components/text/post-title'
 
-import StoreContext from '../../../store'
-import LanguageText from '../../../lib/language-text'
+import StoreContext from 'store'
+import LanguageText from 'lib/language-text'
 
-import { languageOptions } from '../../../languages'
-import PostTitle from '../../text/post-title'
+import { languageOptions } from 'languages'
 
-import getBorderColor from '../../../hooks/getProjectBorderColor'
+import getBorderColor from 'hooks/getProjectBorderColor'
 
 function ProjectItem({ TITLE, DESCRIPTION, DATETIME, ...project }) {
   const store = useContext(StoreContext)
