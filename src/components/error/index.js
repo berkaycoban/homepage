@@ -1,15 +1,13 @@
-import React from 'react'
-
 import styles from './style.module.css'
 
-import Wrapper from '../wrapper'
-import SectionTitle from '../text/section-title'
-import Title from '../text/title'
-import Button from '../button'
+import Wrapper from 'components/wrapper'
+import SectionTitle from 'components/text/section-title'
+import Title from 'components/text/title'
+import Button from 'components/button'
 
-import LanguageText from '../../lib/language-text'
+import LanguageText from 'lib/language-text'
 
-import siteConfig from '../../../site.config'
+import siteConfig from 'config'
 
 function Error404() {
   return (
@@ -30,7 +28,7 @@ function Error404() {
         <ul className={styles.links}>
           <li>
             <Button href="/" key="home">
-              <LanguageText tid={'homePageTitle'} />
+              <LanguageText tid={'homePage'} />
             </Button>
           </li>
           <li>
