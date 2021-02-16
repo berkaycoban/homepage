@@ -1,6 +1,6 @@
 import { Stack, Heading, Container, Box } from '@chakra-ui/react'
 
-import About from '@comp/about'
+import Skill from '@comp/skill'
 import Projects from '@comp/projects'
 import Social from '@comp/social'
 
@@ -10,6 +10,7 @@ import LanguageText from 'lib/language-text'
 function HomePage({ allProjects }) {
   return (
     <>
+      {/* about title */}
       <Container maxW={'4xl'} pb={24} centerContent>
         <Stack spacing={'40px'} textAlign={'center'}>
           <Heading fontWeight={'700'} size={'3xl'}>
@@ -29,7 +30,8 @@ function HomePage({ allProjects }) {
         </Box>
       </Container>
 
-      <About />
+      <Skill />
+
       <Projects home allProjects={allProjects} />
     </>
   )
