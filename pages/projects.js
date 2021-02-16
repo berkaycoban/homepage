@@ -3,8 +3,8 @@ import Head from 'next/head'
 
 import groupBy from 'lodash.groupby'
 
-import Layout from 'components/layout'
-import Projects from 'components/projects'
+import Layout from '@comp/layout'
+import Projects from '@comp/projects'
 
 import { getAllProjects } from 'lib/api'
 import StoreContext from 'store'

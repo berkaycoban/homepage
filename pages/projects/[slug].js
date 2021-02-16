@@ -3,8 +3,8 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import ErrorPage from 'next/error'
 
-import Layout from 'components/layout'
-import ProjectDetail from 'components/projects/detail'
+import Layout from '@comp/layout'
+import ProjectDetail from '@comp/projects/detail'
 
 import markdownToHtml from 'lib/markdownToHtml'
 import { getAllProjects, getProjectBySlug } from 'lib/api'

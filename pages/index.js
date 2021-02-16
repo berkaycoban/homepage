@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import Head from 'next/head'
 
-import Layout from 'components/layout'
-import HeaderTitle from 'components/header/title'
-import About from 'components/about'
-import Projects from 'components/projects'
+import Layout from '@comp/layout'
+import HeaderTitle from '@comp/header/title'
+import About from '@comp/about'
+import Projects from '@comp/projects'
 
 import { getAllProjects } from 'lib/api'
 import StoreContext from 'store'

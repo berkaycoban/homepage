@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import Head from 'next/head'
 
-import Layout from 'components/layout'
-import Error404 from 'components/error'
+import Layout from '@comp/layout'
+import Error404 from '@comp/error'
 
 import StoreContext from 'store'
 import siteConfig from 'config'

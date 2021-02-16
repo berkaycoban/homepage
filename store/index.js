@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react'
-import { dictionaryList } from '../languages'
+import { createContext, useEffect, useState } from 'react'
+import { dictionaryList } from 'languages'
 
 const StoreContext = createContext(null)
 
