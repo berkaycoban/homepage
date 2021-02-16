@@ -10,7 +10,7 @@ import LanguageText from 'lib/language-text'
 function HomePage({ allProjects }) {
   return (
     <>
-      <Container maxW={'4xl'} p={24} centerContent>
+      <Container maxW={'4xl'} pb={24} centerContent>
         <Stack spacing={'40px'} textAlign={'center'}>
           <Heading fontWeight={'700'} size={'3xl'}>
             <LanguageText tid={'welcomeTitle'} />{' '}
