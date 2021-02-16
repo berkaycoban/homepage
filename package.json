@@ -7,8 +7,7 @@
     "dev": "next",
     "build:next": "NODE_ENV=production next build",
     "build": "yarn run build:next",
-    "start": "next start",
-    "icon": "svgr icons -d components/icons --icon"
+    "start": "next start"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -23,7 +22,6 @@
     "remark-html": "^13.0.1"
   },
   "devDependencies": {
-    "@svgr/cli": "^5.5.0",
     "postcss-custom-media": "^8.0.0",
     "postcss-nested": "^5.0.3",
     "prettier": "^2.2.1"
