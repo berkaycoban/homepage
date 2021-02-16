@@ -1,26 +1,12 @@
-import React, { useContext } from 'react'
-import Head from 'next/head'
-
 import groupBy from 'lodash.groupby'
 
 import Projects from '@comp/projects'
 
 import { getAllProjects } from 'lib/api'
-import StoreContext from 'store'
-import siteConfig from 'config'
 
 function ProjectsPage({ allProjects }) {
-  const { userLanguage } = useContext(StoreContext)
-  const title = userLanguage == 'en' ? 'Projects' : 'Projeler'
-
   return (
     <>
-      <Head>
-        <title>
-          {title} - {siteConfig.shortTitle}
-        </title>
-      </Head>
-
       <Projects allProjects={allProjects} />
     </>
   )
