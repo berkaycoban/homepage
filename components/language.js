@@ -40,12 +40,12 @@ function ChangeLanguage() {
             <clipPath id="b">
               <path d="M30 15h30v15zv15H0zH0V0zV0h30z" />
             </clipPath>
-            <g clip-path="url(#a)">
+            <g clipPath="url(#a)">
               <path d="M0 0v30h60V0z" fill="#012169" />
               <path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth="6" />
               <path
                 d="M0 0l60 30m0-30L0 30"
-                clip-path="url(#b)"
+                clipPath="url(#b)"
                 stroke="#C8102E"
                 strokeWidth="4"
               />
