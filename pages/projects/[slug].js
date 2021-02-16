@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import ErrorPage from 'next/error'
 
-import Layout from '@comp/layout'
 import ProjectDetail from '@comp/projects/detail'
 
 import markdownToHtml from 'lib/markdownToHtml'
@@ -23,14 +22,14 @@ function ProjectPage({ project }) {
   }
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>
           {title} - {siteConfig.shortTitle}
         </title>
       </Head>
       <ProjectDetail {...project} />
-    </Layout>
+    </>
   )
 }
 
