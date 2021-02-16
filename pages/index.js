@@ -5,6 +5,7 @@ import Layout from '@comp/layout'
 import HeaderTitle from '@comp/header/title'
 import About from '@comp/about'
 import Projects from '@comp/projects'
+import ChangeColorMode from '@comp/change-color-mode'
 
 import { getAllProjects } from 'lib/api'
 import StoreContext from 'store'
@@ -21,6 +22,7 @@ function HomePage({ allProjects }) {
           {title} - {siteConfig.shortTitle}
         </title>
       </Head>
+      <ChangeColorMode />
 
       <HeaderTitle />
 

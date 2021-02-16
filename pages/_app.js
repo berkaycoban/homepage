@@ -2,24 +2,28 @@ import Head from 'next/head'
 
 import 'styles/app.css'
 
-import { StoreProvider } from 'store'
-
 import FontFace from '@comp/font-face'
 
-export default function MyApp({ Component, pageProps }) {
+import { Chakra } from 'chakra'
+import { StoreProvider } from 'store'
+
+export default function MyApp({ Component, pageProps, cookies }) {
   return (
-    <StoreProvider>
+    <Chakra cookies={cookies}>
       <Head>
-        {/* base */}
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
         />
       </Head>
 
-      <Component {...pageProps} />
+      <StoreProvider>
+        <Component {...pageProps} />
+      </StoreProvider>
 
       <FontFace />
-    </StoreProvider>
+    </Chakra>
   )
 }
+
+export { getServerSideProps } from 'chakra'
