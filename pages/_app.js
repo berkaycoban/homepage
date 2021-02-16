@@ -5,9 +5,11 @@ import 'styles/app.css'
 
 import { StoreProvider } from 'store'
 
+import FontFace from '@comp/font-face'
+
 export default function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <StoreProvider>
       <Head>
         {/* base */}
         <meta
@@ -15,9 +17,10 @@ export default function MyApp({ Component, pageProps }) {
           content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
         />
       </Head>
-      <StoreProvider>
-        <Component {...pageProps} />
-      </StoreProvider>
-    </>
+
+      <Component {...pageProps} />
+
+      <FontFace />
+    </StoreProvider>
   )
 }
