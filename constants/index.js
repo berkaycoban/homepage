@@ -17,24 +17,26 @@ export const MENU = [
   }
 ]
 
-export const SOCIAL = {
-  instagram: {
-    url: 'https://instagram.com/berkaycoban35',
-    name: 'Instagram',
-    target: '_blank'
-  },
-  twitter: {
-    url: 'https://twitter.com/berkaycoban35',
-    name: 'Twitter',
-    target: '_blank'
-  },
-  github: {
-    url: 'https://github.com/berkaycoban',
-    name: 'Github',
-    target: '_blank'
-  }
-}
+import SiteConfig from '../config'
 
+export const SOCIAL = [
+  {
+    url: 'https://instagram.com/berkaycoban35',
+    name: 'Instagram'
+  },
+  {
+    url: 'https://twitter.com/berkaycoban35',
+    name: 'Twitter'
+  },
+  {
+    url: 'https://github.com/berkaycoban',
+    name: 'Github'
+  },
+  {
+    url: `mailto:${SiteConfig.author.email}`,
+    name: 'Email'
+  }
+]
 export const SIZE = {
   MOBILE_SIZE: 768,
   TABLET_SIZE: 980,

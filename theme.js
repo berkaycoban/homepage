@@ -21,7 +21,8 @@ const theme = extendTheme({
     body: 'Inter, sans-serif'
   },
   colors: {
-    customBlack: '#121212'
+    customBlack: '#121212',
+    primary: '#00b0ff'
   },
   styles,
   config
