@@ -1,45 +1,48 @@
-import NextLink from 'next/link'
-import {
-  Container,
-  HStack,
-  Box,
-  Link,
-  Text,
-  useColorModeValue
-} from '@chakra-ui/react'
+import { useContext } from 'react'
+import { Container, Box, Link, Text, useColorModeValue } from '@chakra-ui/react'
 
-import { SOCIAL } from '../constants'
-
-function MenuLink({ url, name }) {
-  const linkColor = useColorModeValue('blackAlpha.800', 'whiteAlpha.800')
-  const linkHoverColor = useColorModeValue('blackAlpha.900', 'whiteAlpha.900')
-
-  return (
-    <NextLink href={url} passHref>
-      <Text
-        as={Link}
-        decoration="none"
-        color={linkColor}
-        _hover={{ color: linkHoverColor }}
-        isExternal
-      >
-        {name}
-      </Text>
-    </NextLink>
-  )
-}
+import StoreContext from 'store'
 
 function Footer() {
   const bgColor = useColorModeValue('blackAlpha.50', 'whiteAlpha.50')
+  const textColor = useColorModeValue('blackAlpha.600', 'whiteAlpha.600')
+  const linkHoverColor = useColorModeValue('blackAlpha.800', 'whiteAlpha.800')
+
+  const store = useContext(StoreContext)
+  const language = store.userLanguage
 
   return (
     <Box as={'footer'} bg={bgColor} p={8}>
       <Container maxW={'3xl'} centerContent>
-        <HStack spacing={'24px'}>
-          {SOCIAL.map((item) => {
-            return <MenuLink key={item.name} {...item} />
-          })}
-        </HStack>
+        <Text color={textColor}>
+          {language == 'tr' ? (
+            <>
+              Bu web sitesinin kaynak kodlarına{' '}
+              <Text
+                as={Link}
+                href="https://github.com/berkaycoban/homepage"
+                _hover={{ color: linkHoverColor }}
+                isExternal
+              >
+                Github üzerinden
+              </Text>{' '}
+              ulaşabilirsiniz ❤️
+            </>
+          ) : (
+            <>
+              You can access the source code of this website on{' '}
+              <Text
+                as={Link}
+                href="https://github.com/berkaycoban/homepage"
+                _hover={{ color: linkHoverColor }}
+                isExternal
+              >
+                Github
+              </Text>{' '}
+              ❤️
+            </>
+          )}
+        </Text>
       </Container>
     </Box>
   )
