@@ -71,7 +71,7 @@ function Skill({ frontend = true, backend = true, tools = true, ...props }) {
 
         <Grid
           mt={12}
-          templateColumns={'repeat(3, 1fr)'}
+          templateColumns={{ md: 'repeat(3, 1fr)' }}
           gap={24}
           justifyContent={'space-between'}
         >
