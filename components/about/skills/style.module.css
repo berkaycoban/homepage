@@ -16,21 +16,21 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+}
 
-  p {
-    font-size: 20px;
-    &:hover {
-      font-weight: 700;
-    }
+.item p {
+  font-size: 20px;
+  &:hover {
+    font-weight: 700;
   }
+}
 
-  span {
-    font-size: 3rem;
-    color: var(--c-primary);
-    transition: all var(--fade) ease;
+.item span {
+  font-size: 3rem;
+  color: var(--c-primary);
+  transition: all var(--fade) ease;
 
-    &:hover {
-      color: var(--c-text);
-    }
+  &:hover {
+    color: var(--c-text);
   }
 }

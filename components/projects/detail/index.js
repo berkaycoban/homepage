@@ -20,8 +20,9 @@ function ProjectDetail({ ...project }) {
           src={project.imageSrc}
           alt={project.imageAlt}
           className={styles.image}
-          unsized
-          quality={100}
+          layout="responsive"
+          width={700}
+          height={475}
         />
         <SectionTitle className={styles.title}>{TITLE}</SectionTitle>
 

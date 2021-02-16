@@ -28,16 +28,16 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: center;
+}
 
-  span {
-    cursor: pointer;
+.tools span {
+  cursor: pointer;
 
-    &:hover {
-      font-weight: 700;
-    }
-
-    & + span {
-      margin-left: 2rem;
-    }
+  &:hover {
+    font-weight: 700;
   }
+}
+
+.tools span + span {
+  margin-left: 2rem;
 }
