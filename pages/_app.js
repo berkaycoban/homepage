@@ -1,11 +1,13 @@
 import Head from 'next/head'
+import { Chakra } from 'chakra'
+import { StoreProvider } from 'store'
+import { Box } from '@chakra-ui/react'
 
 import 'styles/app.css'
 
+import Header from '@comp/header'
+import Footer from '@comp/footer'
 import FontFace from '@comp/font-face'
-
-import { Chakra } from 'chakra'
-import { StoreProvider } from 'store'
 
 export default function MyApp({ Component, pageProps, cookies }) {
   return (
@@ -18,7 +20,11 @@ export default function MyApp({ Component, pageProps, cookies }) {
       </Head>
 
       <StoreProvider>
-        <Component {...pageProps} />
+        <Header />
+        <Box as={'main'}>
+          <Component {...pageProps} />
+        </Box>
+        <Footer />
       </StoreProvider>
 
       <FontFace />

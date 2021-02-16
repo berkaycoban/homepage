@@ -1,23 +1,21 @@
-export const PAGES = {
-  home: {
-    path: '/',
-    name: 'Home',
-    name_tr: 'Anasayfa',
-    target: ''
+export const MENU = [
+  {
+    url: '/',
+    title: 'Home',
+    title_tr: 'Anasayfa'
   },
-  portoflio: {
-    path: '/projects',
-    name: 'Projects',
-    name_tr: 'Projeler',
-    target: ''
+  {
+    url: '/projects',
+    title: 'Projects',
+    title_tr: 'Projeler'
   },
-  follow: {
-    path: 'https://twitter.com/intent/follow?screen_name=berkaycoban35',
-    name: 'Follow Me',
-    name_tr: 'Beni takip et',
-    target: '_blank'
+  {
+    url: 'https://twitter.com/intent/follow?screen_name=berkaycoban35',
+    title: 'Follow Me',
+    title_tr: 'Beni takip et',
+    isExternal: true
   }
-}
+]
 
 export const SOCIAL = {
   instagram: {

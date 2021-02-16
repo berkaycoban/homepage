@@ -3,7 +3,6 @@ import Head from 'next/head'
 
 import groupBy from 'lodash.groupby'
 
-import Layout from '@comp/layout'
 import Projects from '@comp/projects'
 
 import { getAllProjects } from 'lib/api'
@@ -15,7 +14,7 @@ function ProjectsPage({ allProjects }) {
   const title = userLanguage == 'en' ? 'Projects' : 'Projeler'
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>
           {title} - {siteConfig.shortTitle}
@@ -23,7 +22,7 @@ function ProjectsPage({ allProjects }) {
       </Head>
 
       <Projects allProjects={allProjects} />
-    </Layout>
+    </>
   )
 }
 

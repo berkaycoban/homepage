@@ -1,11 +1,3 @@
-.header {
-  color: var(--c-text);
-  background-color: var(--c-backgroundSurface);
-
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .content {
   display: grid;
   grid-template-areas: 'logo menu';

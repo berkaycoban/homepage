@@ -1,11 +1,9 @@
 import React, { useContext } from 'react'
 import Head from 'next/head'
 
-import Layout from '@comp/layout'
 import HeaderTitle from '@comp/header/title'
 import About from '@comp/about'
 import Projects from '@comp/projects'
-import ChangeColorMode from '@comp/change-color-mode'
 
 import { getAllProjects } from 'lib/api'
 import StoreContext from 'store'
@@ -16,19 +14,18 @@ function HomePage({ allProjects }) {
   const title = userLanguage == 'en' ? 'Home Page' : 'Anasayfa'
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>
           {title} - {siteConfig.shortTitle}
         </title>
       </Head>
-      <ChangeColorMode />
 
       <HeaderTitle />
 
       <About />
       <Projects home allProjects={allProjects} />
-    </Layout>
+    </>
   )
 }
 
