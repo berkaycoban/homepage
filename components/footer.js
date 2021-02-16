@@ -12,7 +12,7 @@ function Footer() {
   const language = store.userLanguage
 
   return (
-    <Box as={'footer'} bg={bgColor} p={8}>
+    <Box as={'footer'} bg={bgColor} py={8}>
       <Container maxW={'3xl'} centerContent>
         <Text color={textColor}>
           {language == 'tr' ? (

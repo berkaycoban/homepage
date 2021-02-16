@@ -1,20 +1,13 @@
-import React, { useContext } from 'react'
 import { useRouter } from 'next/router'
-import Head from 'next/head'
+
 import ErrorPage from 'next/error'
 
 import ProjectDetail from '@comp/projects/detail'
 
 import markdownToHtml from 'lib/markdownToHtml'
 import { getAllProjects, getProjectBySlug } from 'lib/api'
-import StoreContext from 'store'
-
-import siteConfig from 'config'
 
 function ProjectPage({ project }) {
-  const { userLanguage } = useContext(StoreContext)
-  const title = userLanguage == 'en' ? project.title_en : project.title
-
   const router = useRouter()
 
   if (!router.isFallback && !project?.slug) {
@@ -23,11 +16,6 @@ function ProjectPage({ project }) {
 
   return (
     <>
-      <Head>
-        <title>
-          {title} - {siteConfig.shortTitle}
-        </title>
-      </Head>
       <ProjectDetail {...project} />
     </>
   )

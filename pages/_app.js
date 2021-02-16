@@ -22,7 +22,7 @@ export default function MyApp({ Component, pageProps, cookies }) {
 
       <StoreProvider>
         <Header />
-        <Box as={'main'}>
+        <Box as={'main'} py={'20'}>
           <Component {...pageProps} />
         </Box>
         <Footer />
