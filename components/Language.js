@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import { Button, Icon } from '@chakra-ui/react'
+import { Button, Icon, useColorModeValue } from '@chakra-ui/react'
 
 import StoreContext from 'store'
 
-function ChangeLanguage() {
+function Language() {
   const store = useContext(StoreContext)
 
   const changeLanguage = () => {
@@ -11,9 +11,18 @@ function ChangeLanguage() {
     store.userLanguageChange(newLang)
   }
 
+  const bgColor = useColorModeValue('gray.200', 'gray.700')
+
   return (
     <>
-      <Button onClick={changeLanguage} variant={'ghost'} fontWeight={400} p={2}>
+      <Button
+        onClick={changeLanguage}
+        variant={'ghost'}
+        fontWeight={400}
+        p={2}
+        bg={bgColor}
+        _hover={{ bg: bgColor }}
+      >
         {store.userLanguage == 'tr' ? (
           <Icon
             xmlns="http://www.w3.org/2000/svg"
@@ -59,4 +68,4 @@ function ChangeLanguage() {
   )
 }
 
-export default ChangeLanguage
+export default Language

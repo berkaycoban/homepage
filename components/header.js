@@ -11,8 +11,8 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 
-import ChangeColorMode from '@comp/color-mode'
-import ChangeLanguage from '@comp/language'
+import ChangeColorMode from '@comp/ColorMode'
+import ChangeLanguage from '@comp/Language'
 
 import { MENU } from '../constants'
 
