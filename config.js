@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Berkay Çoban',
+  title: 'berkay coban',
   shortTitle: 'BC',
   description: 'Freelancer and student from Izmir',
   lang: 'en',

@@ -10,7 +10,7 @@ const styles = {
   global: (props) => ({
     body: {
       color: mode('blackAlpha.900', 'whiteAlpha.900')(props),
-      bg: mode('white', 'customBlack')(props)
+      bg: mode('white', 'black')(props)
     }
   })
 }
@@ -21,7 +21,6 @@ const theme = extendTheme({
     body: 'Inter, sans-serif'
   },
   colors: {
-    customBlack: '#121212',
     primary: '#00b0ff'
   },
   styles,

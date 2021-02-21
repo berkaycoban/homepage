@@ -47,10 +47,10 @@ function MenuLink({ url, title, title_tr, isExternal }) {
 }
 
 function Header() {
-  const bgColor = useColorModeValue('blackAlpha.50', 'whiteAlpha.50')
+  const bgColor = useColorModeValue('white', 'black')
 
   return (
-    <Box as={'header'} py={4} bg={bgColor}>
+    <Box as={'header'} py={8} my={4} bg={bgColor} position={'sticky'} top={0}>
       <Container maxW={'3xl'}>
         <Grid
           as={'nav'}

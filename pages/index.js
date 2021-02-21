@@ -1,17 +1,31 @@
-import { Stack, Heading, Container, Box } from '@chakra-ui/react'
+import { useContext } from 'react'
+import {
+  Stack,
+  Heading,
+  Container,
+  Box,
+  VStack,
+  Grid,
+  useColorModeValue
+} from '@chakra-ui/react'
 
-import Skill from '@comp/skill'
-import Projects from '@comp/projects'
-import Social from '@comp/social'
+import Skill from '@comp/Skill'
+import ProjectItem from '@comp/projects/item'
+import Social from '@comp/Social'
 
 import { getAllProjects } from 'lib/api'
 import LanguageText from 'lib/language-text'
+import StoreContext from 'store'
 
-function HomePage({ allProjects }) {
+function HomePage({ projects }) {
+  const { userLanguage } = useContext(StoreContext)
+
+  const subTitleColor = useColorModeValue('blackAlpha.600', 'whiteAlpha.600')
+
   return (
     <>
       {/* about title */}
-      <Container maxW={'4xl'} pb={24} centerContent>
+      <Container as={'section'} maxW={'4xl'} pb={20} centerContent>
         <Stack spacing={'40px'} textAlign={'center'}>
           <Heading fontWeight={'700'} size={'3xl'}>
             <LanguageText tid={'welcomeTitle'} />{' '}
@@ -32,13 +46,46 @@ function HomePage({ allProjects }) {
 
       <Skill />
 
-      <Projects home allProjects={allProjects} />
+      {/* projects */}
+      <Container as={'section'} maxW={'3xl'} py={20}>
+        <VStack spacing={'12px'}>
+          <Heading as={'h3'} fontWeight={'400'} size={'xl'}>
+            <LanguageText tid={'projectsTitle'} />
+          </Heading>
+          <Heading
+            as={'h5'}
+            fontWeight={'400'}
+            size={'md'}
+            color={subTitleColor}
+          >
+            <LanguageText tid={'projectsSubtitle'} />
+          </Heading>
+        </VStack>
+
+        <Grid gap={8} mt={12}>
+          {projects.map((item) => {
+            const TITLE = userLanguage === 'tr' ? item.title : item.title_en
+            const DESC = userLanguage === 'tr' ? item.desc : item.desc_en
+            const DATETIME = new Date(item.date)
+
+            return (
+              <ProjectItem
+                {...item}
+                title={TITLE}
+                desc={DESC}
+                datetime={DATETIME}
+                key={`project-${item.slug}`}
+              />
+            )
+          })}
+        </Grid>
+      </Container>
     </>
   )
 }
 
 export async function getStaticProps() {
-  const allProjects = getAllProjects([
+  const projects = getAllProjects([
     'title',
     'title_en',
     'desc',
@@ -49,7 +96,7 @@ export async function getStaticProps() {
   ])
 
   return {
-    props: { allProjects }
+    props: { projects }
   }
 }
 

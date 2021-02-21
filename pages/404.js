@@ -11,7 +11,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 
-import Social from '@comp/social'
+import Social from '@comp/Social'
 
 import LanguageText from 'lib/language-text'
 import StoreContext from 'store'

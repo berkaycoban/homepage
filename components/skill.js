@@ -36,6 +36,7 @@ function SkillItem({ icon, items }) {
         {items.map((item) => {
           return (
             <ListItem
+              key={`item_${item}`}
               _hover={{ fontWeight: '600' }}
               children={item}
               cursor={'pointer'}

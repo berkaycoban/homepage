@@ -26,20 +26,6 @@ function Language() {
         {store.userLanguage == 'tr' ? (
           <Icon
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 800"
-            width={'24px'}
-          >
-            <rect width="1200" height="800" fill="#E30A17" />
-            <circle cx="425" cy="400" r="200" style={{ fill: '#ffffff' }} />
-            <circle cx="475" cy="400" r="160" style={{ fill: '#E30A17' }} />
-            <polygon
-              style={{ fill: '#ffffff' }}
-              points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"
-            />
-          </Icon>
-        ) : (
-          <Icon
-            xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 60 30"
             width={'24px'}
           >
@@ -61,6 +47,20 @@ function Language() {
               <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10" />
               <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6" />
             </g>
+          </Icon>
+        ) : (
+          <Icon
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 800"
+            width={'24px'}
+          >
+            <rect width="1200" height="800" fill="#E30A17" />
+            <circle cx="425" cy="400" r="200" style={{ fill: '#ffffff' }} />
+            <circle cx="475" cy="400" r="160" style={{ fill: '#E30A17' }} />
+            <polygon
+              style={{ fill: '#ffffff' }}
+              points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"
+            />
           </Icon>
         )}
       </Button>

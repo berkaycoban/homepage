@@ -1,50 +1,58 @@
 import { useContext } from 'react'
+import NextLink from 'next/link'
+import { Box, Text, Heading, useColorModeValue } from '@chakra-ui/react'
 import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict'
 import { tr } from 'date-fns/locale'
-
-import styles from './style.module.css'
-
-import TextBody from 'components/text/body'
-import Button from 'components/button'
-import PostTitle from 'components/text/post-title'
 
 import StoreContext from 'store'
 import LanguageText from 'lib/language-text'
 
-import { languageOptions } from 'languages'
-
-import getBorderColor from 'hooks/getProjectBorderColor'
-
-function ProjectItem({ TITLE, DESCRIPTION, DATETIME, ...project }) {
+function ProjectItem({ title, desc, datetime, ...project }) {
   const store = useContext(StoreContext)
 
-  // project border top color
-  const borderColor = getBorderColor(project.category)
-
   // Datetime i18n
-  const locale = store.userLanguage === languageOptions.tr
+  const locale = store.userLanguage === 'tr'
   const dateTime = formatDistanceToNowStrict(
-    DATETIME,
+    datetime,
     locale && {
       locale: tr
     }
   )
 
+  const color = useColorModeValue('blackAlpha.600', 'whiteAlpha.600')
+  const borderColor = useColorModeValue('gray.200', 'gray.700')
+
   return (
-    <article
-      className={styles.project}
-      style={{ '--border-color': borderColor }}
+    <Box
+      border={'1px'}
+      borderColor={borderColor}
+      p={8}
+      _hover={{
+        boxShadow: 'md'
+      }}
+      transitionDuration={'300ms'}
+      cursor={'pointer'}
     >
-      <Button href={`projects/${project.slug}`} className={styles.content}>
-        <PostTitle className={styles.title}>{TITLE}</PostTitle>
+      <NextLink href={`projects/${project.slug}`}>
+        <Box>
+          <Heading as={'h4'} size={'md'}>
+            {title}
+          </Heading>
 
-        <TextBody className={styles.description}>{DESCRIPTION}</TextBody>
+          <Text my={4}>{desc}</Text>
 
-        <time className={styles.datetime}>
-          {dateTime} <LanguageText tid={'ago'} />
-        </time>
-      </Button>
-    </article>
+          <Box
+            as={'time'}
+            color={color}
+            textTransform={'uppercase'}
+            fontSize={'sm'}
+            marginTop={'auto'}
+          >
+            {dateTime} <LanguageText tid={'ago'} />
+          </Box>
+        </Box>
+      </NextLink>
+    </Box>
   )
 }
 

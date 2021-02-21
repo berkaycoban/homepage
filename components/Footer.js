@@ -4,7 +4,7 @@ import { Container, Box, Link, Text, useColorModeValue } from '@chakra-ui/react'
 import StoreContext from 'store'
 
 function Footer() {
-  const bgColor = useColorModeValue('blackAlpha.50', 'whiteAlpha.50')
+  const bgColor = useColorModeValue('white', 'black')
   const textColor = useColorModeValue('blackAlpha.600', 'whiteAlpha.600')
   const linkHoverColor = useColorModeValue('blackAlpha.800', 'whiteAlpha.800')
 
