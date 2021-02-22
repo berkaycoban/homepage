@@ -29,17 +29,24 @@ function ProjectPage({ project }) {
 
   const color = useColorModeValue('blackAlpha.600', 'whiteAlpha.600')
 
+  const paddingTop = project.imageSrc ? 20 : 0
+
+  // TODO: Refactor
+
   return (
     <Box as="section" mt={-20}>
-      <Image
-        src={project.imageSrc}
-        alt={project.imageAlt}
-        layout="responsive"
-        width={2000}
-        height={1000}
-      />
-      <Container maxW={'3xl'}>
-        <Grid gap={12} py={20} textAlign={'center'} justifyContent={'center'}>
+      {project.imageSrc && (
+        <Image
+          src={project.imageSrc}
+          alt={project.imageAlt}
+          layout="responsive"
+          width={1200}
+          height={500}
+        />
+      )}
+
+      <Container maxW={'3xl'} pt={paddingTop}>
+        <Grid gap={12} pb={20} textAlign={'center'} justifyContent={'center'}>
           <VStack spacing={'12px'}>
             <Heading as={'h3'} fontWeight={'400'} size={'xl'}>
               {TITLE}
@@ -63,6 +70,16 @@ function ProjectPage({ project }) {
           </Box>
         </Grid>
       </Container>
+
+      {project.detailImageSrc && (
+        <Image
+          src={project.detailImageSrc}
+          alt={project.detailImageAlt}
+          layout="responsive"
+          width={2867}
+          height={5044}
+        />
+      )}
     </Box>
   )
 }
@@ -78,6 +95,8 @@ export async function getStaticProps({ params }) {
     'date',
     'imageSrc',
     'imageAlt',
+    'detailImageSrc',
+    'detailImageAlt',
     'category',
     'tools'
   ])
