@@ -30,7 +30,7 @@ function ProjectPage({ project }) {
   const color = useColorModeValue('blackAlpha.600', 'whiteAlpha.600')
 
   return (
-    <Box as="section">
+    <Box as="section" mt={-20}>
       <Image
         src={project.imageSrc}
         alt={project.imageAlt}

@@ -3,8 +3,6 @@ import { Chakra } from 'chakra'
 import { StoreProvider } from 'store'
 import { Box } from '@chakra-ui/react'
 
-import 'styles/app.css'
-
 import Header from '@comp/Header'
 import Footer from '@comp/Footer'
 import FontFace from '@comp/FontFace'
@@ -24,7 +22,7 @@ export default function MyApp({ Component, pageProps, cookies }) {
 
       <StoreProvider>
         <Header />
-        <Box as={'main'}>
+        <Box as={'main'} py={20}>
           <Component {...pageProps} />
         </Box>
         <Footer />

@@ -3,12 +3,8 @@ import {
   VStack,
   Box,
   Heading,
-  Link,
   Grid,
-  Icon,
-  IconButton,
   useColorModeValue,
-  HStack,
   List,
   ListItem
 } from '@chakra-ui/react'

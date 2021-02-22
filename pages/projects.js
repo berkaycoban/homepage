@@ -13,7 +13,7 @@ function ProjectsPage({ allProjects }) {
   const { userLanguage } = useContext(StoreContext)
 
   return (
-    <Box as={'section'}>
+    <Box as={'section'} mt={-8}>
       <Container maxW={'3xl'}>
         <Grid gap={20}>
           {Object.keys(allProjects)

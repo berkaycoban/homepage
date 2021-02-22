@@ -25,7 +25,7 @@ function HomePage({ projects }) {
   return (
     <>
       {/* about title */}
-      <Container as={'section'} maxW={'4xl'} py={20} centerContent>
+      <Container as={'section'} maxW={'4xl'} pb={20} centerContent>
         <Stack spacing={'40px'} textAlign={'center'}>
           <Heading fontWeight={'700'} size={'3xl'}>
             <LanguageText tid={'welcomeTitle'} />{' '}

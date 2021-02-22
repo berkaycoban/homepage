@@ -10,7 +10,11 @@ const styles = {
   global: (props) => ({
     body: {
       color: mode('blackAlpha.900', 'whiteAlpha.900')(props),
-      bg: mode('white', 'black')(props)
+      bg: mode('white', 'black')(props),
+      '*::selection': {
+        color: mode('black', 'white')(props),
+        bg: 'primary'
+      }
     }
   })
 }
