@@ -50,7 +50,15 @@ function Header() {
   const bgColor = useColorModeValue('white', 'black')
 
   return (
-    <Box as={'header'} py={8} my={4} bg={bgColor} position={'sticky'} top={0}>
+    <Box
+      as={'header'}
+      py={8}
+      my={4}
+      bg={bgColor}
+      position={'sticky'}
+      top={0}
+      zIndex={'10'}
+    >
       <Container maxW={'3xl'}>
         <Grid
           as={'nav'}

@@ -24,7 +24,7 @@ export default function MyApp({ Component, pageProps, cookies }) {
 
       <StoreProvider>
         <Header />
-        <Box as={'main'} py={'20'}>
+        <Box as={'main'}>
           <Component {...pageProps} />
         </Box>
         <Footer />
