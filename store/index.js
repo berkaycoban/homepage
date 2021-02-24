@@ -4,7 +4,7 @@ import { dictionaryList } from 'languages'
 const StoreContext = createContext(null)
 
 export function StoreProvider({ children }) {
-  const [userLanguage, setUserLanguage] = useState('tr')
+  const [userLanguage, setUserLanguage] = useState('en')
 
   const userLanguageChange = (language) => {
     setUserLanguage(language)
@@ -12,7 +12,10 @@ export function StoreProvider({ children }) {
   }
 
   useEffect(() => {
-    let defaultLanguage = window.localStorage.getItem('LANG') || 'tr'
+    let browserLang = navigator.language || navigator.userLanguage
+    const lang = browserLang.split('-')
+
+    let defaultLanguage = localStorage.getItem('LANG') || lang[0]
     userLanguageChange(defaultLanguage)
   }, [userLanguageChange])
 
