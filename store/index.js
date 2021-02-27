@@ -15,7 +15,9 @@ export function StoreProvider({ children }) {
     let browserLang = navigator.language || navigator.userLanguage
     const lang = browserLang.split('-')
 
-    let defaultLanguage = localStorage.getItem('LANG') || lang[0]
+    let defaultLanguage =
+      localStorage.getItem('LANG') ||
+      (lang[0] == 'tr' || lang[0] == 'en' ? lang[0] : 'en')
     userLanguageChange(defaultLanguage)
   }, [userLanguageChange])
 
