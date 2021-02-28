@@ -37,7 +37,7 @@ function ProjectsPage({ allProjects }) {
                         <ProjectItem
                           {...project}
                           title={TITLE}
-                          description={DESC}
+                          desc={DESC}
                           datetime={DATETIME}
                           key={`project-${project.slug}`}
                         />
