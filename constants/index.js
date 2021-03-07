@@ -17,12 +17,6 @@ export const MENU = [
   // }
 ]
 
-export const SIZE = {
-  MOBILE_SIZE: 768,
-  TABLET_SIZE: 980,
-  DESKTOP_SIZE: 1270
-}
-
 import * as Icon from '../components/icons'
 
 export const SKILLS = {
