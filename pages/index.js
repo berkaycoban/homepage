@@ -26,7 +26,7 @@ function HomePage({ projects }) {
     <>
       {/* about title */}
       <Container as={'section'} maxW={'4xl'} pb={20} centerContent>
-        <Stack spacing={'40px'} textAlign={'center'}>
+        <Stack spacing={16} textAlign={'center'}>
           <Heading fontWeight={'700'} size={'3xl'}>
             <LanguageText tid={'welcomeTitle'} />{' '}
             <Box as={'span'} color={'primary'}>
@@ -34,14 +34,20 @@ function HomePage({ projects }) {
             </Box>
           </Heading>
 
-          <Heading as={'h3'} fontWeight={'400'} size={'xl'}>
-            <LanguageText tid={'job'} />
+          <VStack>
+            <Heading as={'h3'} fontWeight={'300'} size={'md'}>
+              <LanguageText tid={'aboutMe'} />
+            </Heading>
+            <Heading as={'h3'} fontWeight={'300'} size={'md'}>
+              <LanguageText tid={'also'} />
+            </Heading>
+          </VStack>
+          <Heading as={'h3'} fontWeight={'300'} size={'md'}>
+            <LanguageText tid={'contactMe'} />
           </Heading>
         </Stack>
 
-        <Box mt={12}>
-          <Social />
-        </Box>
+        <Social mt={12} />
       </Container>
 
       <Skill />
