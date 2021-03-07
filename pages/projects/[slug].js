@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import ErrorPage from 'next/error'
@@ -7,8 +7,9 @@ import {
   Container,
   VStack,
   Heading,
-  Text,
   Grid,
+  List,
+  ListItem,
   useColorModeValue
 } from '@chakra-ui/react'
 
@@ -16,6 +17,7 @@ import StoreContext from 'store'
 
 import markdownToHtml from 'lib/markdownToHtml'
 import { getAllProjects, getProjectBySlug } from 'lib/api'
+import LanguageText from 'lib/language-text'
 
 function ProjectPage({ project }) {
   const router = useRouter()
@@ -27,7 +29,7 @@ function ProjectPage({ project }) {
   const { userLanguage } = useContext(StoreContext)
   const TITLE = userLanguage == 'tr' ? project.title : project.title_en
 
-  const color = useColorModeValue('blackAlpha.600', 'whiteAlpha.600')
+  const color = useColorModeValue('blackAlpha.600', 'gray.600')
 
   const paddingTop = project.imageSrc ? 20 : 0
 
@@ -53,21 +55,22 @@ function ProjectPage({ project }) {
             </Heading>
           </VStack>
 
-          <Text>
-            {userLanguage == 'tr' && (
-              <div dangerouslySetInnerHTML={{ __html: project.content }} />
-            )}
-          </Text>
+          {userLanguage == 'tr' && (
+            <div dangerouslySetInnerHTML={{ __html: project.content }} />
+          )}
 
-          <Box color={color}>
-            {Object.keys(project.tools).map((item) => {
-              return (
-                <Box as={'span'} key={item} px={2}>
-                  {item}
-                </Box>
-              )
-            })}
-          </Box>
+          <VStack color={color} spacing={4}>
+            <Heading as={'h4'} size={'md'} fontWeight={'300'}>
+              <LanguageText tid={'usedLibraries'} />
+            </Heading>
+            <List display={'flex'} gridGap={4}>
+              {React.Children.toArray(
+                Object.keys(project.tools).map((item) => {
+                  return <ListItem>{item}</ListItem>
+                })
+              )}
+            </List>
+          </VStack>
         </Grid>
       </Container>
 
