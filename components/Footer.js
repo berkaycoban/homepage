@@ -14,7 +14,7 @@ function Footer() {
   return (
     <Box as={'footer'} bg={bgColor} py={8} my={4}>
       <Container maxW={'3xl'} centerContent>
-        <Text color={textColor}>
+        <Text color={textColor} textAlign={'center'}>
           {language == 'tr' ? (
             <>
               Bu web sitesinin kaynak kodlarına{' '}
