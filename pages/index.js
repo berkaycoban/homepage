@@ -47,7 +47,7 @@ function HomePage({ projects }) {
           </Heading>
         </Stack>
 
-        <Social mt={12} />
+        <Social mt={12} language={userLanguage} />
       </Container>
 
       <Skill />

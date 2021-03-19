@@ -22,6 +22,8 @@ function Social({
   github = true,
   instagram = true,
   email = true,
+  resume = true,
+  language = 'tr',
   ...props
 }) {
   return (
@@ -93,6 +95,27 @@ function Social({
               d="M20 20H4C2.89543 20 2 19.1046 2 18V5.913C2.04661 4.84255 2.92853 3.99899 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20ZM4 7.868V18H20V7.868L12 13.2L4 7.868ZM4.8 6L12 10.8L19.2 6H4.8Z"
               fill="currentColor"
             />
+          </svg>
+        </SocialButton>
+      )}
+
+      {resume && (
+        <SocialButton href={`/resume/${language}.pdf`} target={'_blank'}>
+          <svg
+            width={22}
+            height={22}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Resume icon</title>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            ></path>
           </svg>
         </SocialButton>
       )}
