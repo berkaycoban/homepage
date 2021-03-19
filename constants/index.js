@@ -26,7 +26,7 @@ export const SKILLS = {
   },
   frontend: {
     icon: <Icon.Frontend />,
-    items: ['HTML 5', 'CSS 3 & SASS', 'Javascript']
+    items: ['HTML 5', 'CSS 3 & SCSS', 'JS & Next.js']
   },
   backend: {
     icon: <Icon.Backend />,
