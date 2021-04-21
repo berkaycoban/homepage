@@ -1,12 +1,12 @@
 module.exports = {
   title: 'berkay coban',
   shortTitle: 'BC',
-  description: 'Freelancer and student from Izmir',
+  description: 'Developer and CE student from Izmir, Turkey',
   lang: 'en',
   siteUrl: 'https://berkaycoban.com',
   googleAnalytic: 'G-DKPGLDF3GF',
   author: {
-    email: 'berkaycoban@pm.me',
+    email: 'berkay.coban@icloud.com',
     name: 'Berkay COBAN'
   },
   social: {
@@ -14,6 +14,7 @@ module.exports = {
     twitter: 'https://twitter.com/berkaycoban35',
     medium: 'https://medium.com/@berkaycoban',
     github: 'https://github.com/berkaycoban',
-    email: `mailto:berkay.coban@icloud.com`
+    email: `mailto:berkay.coban@icloud.com`,
+    telegram: 'https://t.me/berkaycoban'
   }
 }
