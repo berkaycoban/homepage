@@ -21,6 +21,7 @@ function HomePage({ projects }) {
   const { userLanguage } = useContext(StoreContext)
 
   const subTitleColor = useColorModeValue('blackAlpha.600', 'whiteAlpha.600')
+  const projectsBgColor = useColorModeValue('blackAlpha.50', 'whiteAlpha.50')
 
   return (
     <>
@@ -50,42 +51,47 @@ function HomePage({ projects }) {
         <Social mt={12} language={userLanguage} />
       </Container>
 
-      <Skill />
+      {/* 
+        Until skills updated.
+        <Skill />
+      */}
 
       {/* projects */}
-      <Container as={'section'} maxW={'3xl'} py={20}>
-        <VStack spacing={'12px'}>
-          <Heading as={'h3'} fontWeight={'400'} size={'xl'}>
-            <LanguageText tid={'projectsTitle'} />
-          </Heading>
-          <Heading
-            as={'h5'}
-            fontWeight={'400'}
-            size={'md'}
-            color={subTitleColor}
-          >
-            <LanguageText tid={'projectsSubtitle'} />
-          </Heading>
-        </VStack>
+      <Box as={'section'} bg={projectsBgColor} py={20}>
+        <Container maxW={'3xl'}>
+          <VStack spacing={'12px'}>
+            <Heading as={'h3'} fontWeight={'400'} size={'xl'}>
+              <LanguageText tid={'projectsTitle'} />
+            </Heading>
+            <Heading
+              as={'h5'}
+              fontWeight={'400'}
+              size={'md'}
+              color={subTitleColor}
+            >
+              <LanguageText tid={'projectsSubtitle'} />
+            </Heading>
+          </VStack>
 
-        <Grid gap={8} mt={12}>
-          {projects.map((item) => {
-            const TITLE = userLanguage === 'tr' ? item.title : item.title_en
-            const DESC = userLanguage === 'tr' ? item.desc : item.desc_en
-            const DATETIME = new Date(item.date)
+          <Grid gap={8} mt={12}>
+            {projects.map((item) => {
+              const TITLE = userLanguage === 'tr' ? item.title : item.title_en
+              const DESC = userLanguage === 'tr' ? item.desc : item.desc_en
+              const DATETIME = new Date(item.date)
 
-            return (
-              <ProjectItem
-                {...item}
-                title={TITLE}
-                desc={DESC}
-                datetime={DATETIME}
-                key={`project-${item.slug}`}
-              />
-            )
-          })}
-        </Grid>
-      </Container>
+              return (
+                <ProjectItem
+                  {...item}
+                  title={TITLE}
+                  desc={DESC}
+                  datetime={DATETIME}
+                  key={`project-${item.slug}`}
+                />
+              )
+            })}
+          </Grid>
+        </Container>
+      </Box>
     </>
   )
 }
