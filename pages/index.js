@@ -9,7 +9,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 
-import Skill from '@comp/Skill'
+// import Skill from '@comp/Skill'
 import ProjectItem from '@comp/ProjectItem'
 import Social from '@comp/Social'
 

@@ -53,6 +53,12 @@ class MyDocument extends NextDocument {
               />
             </>
           )}
+          {/* GoatCounter */}
+          <script
+            data-goatcounter="https://berkay.goatcounter.com/count"
+            async
+            src="//gc.zgo.at/count.js"
+          ></script>
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />

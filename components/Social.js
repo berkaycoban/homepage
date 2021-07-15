@@ -22,7 +22,7 @@ function Social({
   github = true,
   instagram = true,
   email = true,
-  resume = true,
+  resume = false,
   telegram = true,
   language = 'tr',
   ...props
