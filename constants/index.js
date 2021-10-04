@@ -8,6 +8,11 @@ export const MENU = [
     url: '/projects',
     title: 'Projects',
     title_tr: 'Projeler'
+  },
+  {
+    url: '/bookmarks',
+    title: 'Bookmarks',
+    title_tr: 'Yer imleri'
   }
   // {
   //   url: 'https://twitter.com/intent/follow?screen_name=berkaycoban35',
