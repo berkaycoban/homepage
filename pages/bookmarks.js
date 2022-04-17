@@ -1,4 +1,4 @@
-import { Container, Box, Heading, Grid } from '@chakra-ui/layout'
+import { Container, Box, Heading, Grid, Divider } from '@chakra-ui/layout'
 import groupBy from 'lodash.groupby'
 
 import { format, parseISO } from 'date-fns'
@@ -8,23 +8,35 @@ import LanguageText from 'lib/language-text'
 
 import BookmarkCard from '@comp/BookmarkCard'
 
-function BookmarkPage({ data, weeks }) {
+function BookmarkPage({ data }) {
   return (
     <Box as={'section'} mt={-8}>
-      <Container maxW={'3xl'}>
-        <Grid gap={20}>
-          {weeks.map((date) => (
-            <Box key={date} className="mt-20">
-              <Heading as={'h3'} fontWeight={'400'} size={'lg'}>
-                {date}. <LanguageText tid={'week'} />, 2021
+      <Container maxW="3xl">
+        <Grid gap="10">
+          {data.map((item) => (
+            <>
+              <Heading as="h1" fontWeight="700" size="xl">
+                {item.year}
               </Heading>
 
-              <Grid gap={8} mt={12}>
-                {data[date].map((item) => {
-                  return <BookmarkCard key={item._id} {...item} />
-                })}
+              <Divider />
+
+              <Grid gap="20" mb="10">
+                {item.weeks.map((date) => (
+                  <Box key={date} className="mt-20">
+                    <Heading as="h3" fontWeight="400" size="lg">
+                      {date}. <LanguageText tid={'week'} />, {item.year}
+                    </Heading>
+
+                    <Grid gap="8" mt="12">
+                      {item.bookmarks[date].map((item) => {
+                        return <BookmarkCard key={item._id} {...item} />
+                      })}
+                    </Grid>
+                  </Box>
+                ))}
               </Grid>
-            </Box>
+            </>
           ))}
         </Grid>
       </Container>
@@ -33,22 +45,33 @@ function BookmarkPage({ data, weeks }) {
 }
 
 export async function getStaticProps() {
-  const data = await getBookmark()
+  const resData = await getBookmark()
 
-  const dataGroupByDay = groupBy(data, (item) => {
-    const weekNumber = format(parseISO(item.created), 'w')
-    return parseInt(weekNumber) - 1
+  const dataGroupByYear = groupBy(resData, (item) => {
+    return parseInt(format(parseISO(item.created), 'yyyy'))
   })
 
-  const weeks = Object.keys(dataGroupByDay)
-    .map((o) => parseInt(o))
-    .reverse()
+  let data = []
+
+  Object.keys(dataGroupByYear).map((year) => {
+    const bookmarksByYear = dataGroupByYear[year]
+
+    const dataGroupByDay = groupBy(bookmarksByYear, (item) => {
+      const weekNumber = format(parseISO(item.created), 'w')
+      return parseInt(weekNumber) - 1
+    })
+
+    const weeks = Object.keys(dataGroupByDay)
+      .map((o) => parseInt(o))
+      .reverse()
+
+    data.push({ year, weeks, bookmarks: dataGroupByDay })
+  })
+
+  data.sort((a, b) => (a.year < b.year ? 1 : -1))
 
   return {
-    props: {
-      data: dataGroupByDay,
-      weeks
-    },
+    props: { data },
     revalidate: 7200
   }
 }
