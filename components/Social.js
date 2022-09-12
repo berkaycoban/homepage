@@ -22,8 +22,8 @@ function Social({
   github = true,
   instagram = true,
   email = true,
-  resume = false,
-  telegram = true,
+  resume = true,
+  telegram = false,
   language = 'tr',
   ...props
 }) {
@@ -122,7 +122,10 @@ function Social({
       )}
 
       {resume && (
-        <SocialButton href={`/resume/${language}.pdf`} target={'_blank'}>
+        <SocialButton
+          href={`/resume/Berkay_Coban_New_Resume.pdf`}
+          target={'_blank'}
+        >
           <svg
             width={22}
             height={22}
