@@ -4,11 +4,11 @@ export const MENU = [
     title: 'Home',
     title_tr: 'Anasayfa'
   },
-  {
-    url: '/projects',
-    title: 'Projects',
-    title_tr: 'Projeler'
-  },
+  // {
+  //   url: '/projects',
+  //   title: 'Projects',
+  //   title_tr: 'Projeler'
+  // },
   {
     url: '/bookmarks',
     title: 'Bookmarks',
