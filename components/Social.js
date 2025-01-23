@@ -20,7 +20,7 @@ function SocialButton({ href, children }) {
 function Social({
   twitter = true,
   github = true,
-  instagram = true,
+  instagram = false,
   email = true,
   resume = true,
   telegram = false,
